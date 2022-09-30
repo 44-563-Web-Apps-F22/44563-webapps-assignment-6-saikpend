@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>president page </title>
+<h3>Musician guess by saikiran pendli</h3>
+<h2> Getting Input </h2>
+</head>
+<body>
+    <form>
+        <label for="sec3_musician">Enter the secret Musician name </label>
+        <input type ="password" id="sec3_musician" name="secretName" min=10 max=50 step=2 value="Jhon Lennon"> <br>
+    
+        <label for="gs3_musician">Guess the Musician </label>
+        <input type ="text" id="gs3_musician" name="guessMusician" autofocus> <br>
+    
+        <input type="button" onclick="checkGuess()" value="Check the Guess">
+    </form>
+    
+    
+    <p id="result">This text will be replaced </p>
+    
+    <script> 
+    
+            let correct=0;
+            let wrong=0;
+        
+            function  checkGuess(){
+               console.log("Getting form values")
+                SecretMusician = document.getElementById("sec3_musician").value
+                guess = document.getElementById("gs3sss_musician").value
+                
+        
+                
+                if(SecretMusician==guess){
+                    correct+=1;
+                    alert("You got it right");
+                } else {
+                    wrong+=1;
+                    alert("Wrong");
+                }
+               document.getElementById("result").innerHTML="correct "+correct+"  wrong "+wrong;
+            }
+    </script>
+</body>
+</html> 
